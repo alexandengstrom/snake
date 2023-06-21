@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+}
+
+body {
+    height: 100vh;
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#231942, #130a1c);
+    margin: auto;
+}
+
+.gameboard {
+    background-image: linear-gradient(#e0b1cb, #FFC0CB);
+    width: 80vmin;
+    height: 80vmin;
+    display: grid;
+    grid-template-rows: repeat(21, 1fr);
+    grid-template-columns: repeat(21, 1fr);
+    border: 8px solid white;
+    border-radius: 2%;
+    position: relative;
+    box-shadow: 2px 2px 15px #888888;
+}
+
+.snake {
+    background-color: #9f86c0;
+    border: 1px solid black;
+    border-radius: 20%;
+    z-index: 10;
+}
+
+.food {
+    background-image: url("apple.png");
+    background-size: cover;   
+}
+
+h1 {
+    font-size: 2rem;
+    color: #be95c4;
+    text-shadow: 2px 2px 5px #5e548e;    
+}
+
+.topmenu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.topmenu h1 {
+    padding: 20px;
+    font-size: 5rem;    
+}
+
+.scores  {
+    display: flex;
+    padding: 10px;
+}
+
+.choosespeed {
+    display: flex;
+    padding: 10px;
+}
+
+.gameover {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    background-image: linear-gradient(#231942, pink);
+    color: #be95c4;
+    text-shadow: 2px 2px 5px #5e548e;
+    z-index: 20;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 6px solid white;
+    border-radius: 20%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
+
+.gameover p {
+    padding: 30px;
+    font-size: 3rem;
+}
+
+.gameover button {
+    width: 180px;
+    height: 60px;
+    border: none;
+    border-radius: 20px;
+    font-size: 2rem;
+}
